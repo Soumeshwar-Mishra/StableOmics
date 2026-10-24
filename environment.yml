@@ -1,0 +1,22 @@
+name: stableomics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - statsmodels>=0.14
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - pyyaml>=6.0
+  - psutil>=5.9
+  - tqdm>=4.65
+  - pip
+  - pip:
+      - pydeseq2>=0.4.0
+      - gseapy>=1.0.5
+      - GEOparse>=2.0.3

@@ -1,0 +1,11 @@
+Perturbation_Intensity,Method,Cross_Cohort_Rank_Agreement,Type
+0.0,Single-cohort DE,0.726529064391016,Perturbed Real Cohort
+0.0,StableOmics (S_g * D_g),0.6319413043250005,Perturbed Real Cohort
+0.25,Single-cohort DE,0.6833796900146714,Perturbed Real Cohort
+0.25,StableOmics (S_g * D_g),0.674549711615988,Perturbed Real Cohort
+0.5,Single-cohort DE,0.6644043176016193,Perturbed Real Cohort
+0.5,StableOmics (S_g * D_g),0.637682244220625,Perturbed Real Cohort
+0.75,Single-cohort DE,0.6565236762567003,Perturbed Real Cohort
+0.75,StableOmics (S_g * D_g),0.5269680471263906,Perturbed Real Cohort
+1.0,Single-cohort DE,0.6499982610420141,Perturbed Real Cohort
+1.0,StableOmics (S_g * D_g),0.4258727195570784,Perturbed Real Cohort

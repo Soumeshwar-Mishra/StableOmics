@@ -1,0 +1,8 @@
+# Empirical Results Summary — Real NCBI GEO Colorectal Cancer Cohorts (Section 13.4)
+
+1. **Cohort characteristics**: After applying prespecified inclusion and exclusion criteria across NCBI GEO, 4 independent bulk RNA-seq cohorts (GSE44076, GSE44861, GSE20916, GSE32323) comprising 225 primary colorectal cancer cases and 226 non-tumour colonic mucosa controls across 7542 harmonized GRCh38.p13 genes were analysed (Table 5).
+2. **Baseline differential expression**: Within-cohort count-aware differential expression identified statistically significant disease-associated genes at Benjamini-Hochberg FDR q < 0.05 and |log2FC| >= 0.585, with MSigDB Hallmark enrichment summarized in `Pathway_Reproducibility_Summary.csv`.
+3. **Within-cohort stability**: Across the stratified sample-size ladder ([8, 12, 16, 24, 32] samples/group, B=100 resamples), median top-50 Jaccard stability increased with sample size, with `StableOmics (S_g * D_g)` outperforming single-analysis DE (Figure 3).
+4. **External validation (Primary Endpoint)**: In nested leave-one-cohort-out evaluation at prespecified K=50, `StableOmics_Rg` achieved a mean external directional replication rate (DR_50) of 1.000 versus 1.000 for single-cohort DE (paired Delta = +0.000; Table 6, Table 7, Figure 5).
+5. **Perturbation sensitivity**: Under controlled quality-imbalance perturbations on real expression matrices, `StableOmics` retained higher cross-cohort Spearman rank agreement than baseline DE (Figure 4).
+6. **Computational efficiency**: The entire nested multi-cohort evaluation executed within a peak resident memory footprint of 0.598 GB RAM on CPU (Table 4, Figure 8).

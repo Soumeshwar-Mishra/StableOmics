@@ -1,0 +1,40 @@
+/home/soumeshwar/stableomics/stableomics/StableOmics/src/plotting.py:44: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(
+/home/soumeshwar/stableomics/stableomics/StableOmics/src/plotting.py:44: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(
+/home/soumeshwar/stableomics/stableomics/StableOmics/src/plotting.py:44: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(
+/home/soumeshwar/stableomics/stableomics/StableOmics/src/plotting.py:44: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(
+=== Starting StableOmics Real-Cohort Pipeline [Mode: quick | B=100 | Primary Top-K=50] ===
+[GEO Loader] Parsing GSE44076...
+  [Annotation] Loading cached probe map from data/processed/GSE44076_family.soft_map.pkl...
+  -> GSE44076: 98 CRC Cases, 148 Normal Controls, 19468 Mapped HGNC Genes.
+[GEO Loader] Parsing GSE44861...
+  [Annotation] Loading cached probe map from data/processed/GPL3921.annot_map.pkl...
+  -> GSE44861: 74 CRC Cases, 37 Normal Controls, 13183 Mapped HGNC Genes.
+[GEO Loader] Parsing GSE20916...
+  [Annotation] Loading cached probe map from data/processed/GPL570.annot_map.pkl...
+  -> GSE20916: 41 CRC Cases, 49 Normal Controls, 14123 Mapped HGNC Genes.
+[GEO Loader] Parsing GSE32323...
+  -> GSE32323: 17 CRC Cases, 17 Normal Controls, 21753 Mapped HGNC Genes.
+[QC Harmonization] Common HGNC gene universe across all 4 cohorts: 7542 genes.
+[QC Harmonization] Common HGNC gene universe across all 4 cohorts: 7542 genes.
+[QC Harmonization] Common HGNC gene universe across all 4 cohorts: 7542 genes.
+  -> Running B=100 stratified resamples on GSE44076 (N=246, G=7542)...
+  -> Running B=100 stratified resamples on GSE44861 (N=111, G=7542)...
+  -> Running B=100 stratified resamples on GSE20916 (N=60, G=7542)...
+  -> Running B=100 stratified resamples on GSE32323 (N=34, G=7542)...
+=== Real-Cohort Pipeline Complete! All Tables, Figures, and Top Biomarker Lists saved in results/ ===

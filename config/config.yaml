@@ -1,0 +1,53 @@
+project:
+  name: "StableOmics"
+  disease: "Colorectal_Cancer_vs_Normal_Mucosa"
+  random_seed: 20261021
+  mode: "quick"  # "quick" (B=100) for verification; change to "full" (B=500) for manuscript
+
+hardware:
+  max_ram_gb: 12.0
+  n_workers: 1
+
+resampling:
+  B_quick: 100
+  B_full: 500
+  sample_size_ladder: [8, 12, 16, 24, 32]
+  class_imbalance_ratios: [0.25, 0.4, 0.5, 0.6, 0.75]
+  quality_perturbation_intensities: [0.0, 0.25, 0.5, 0.75, 1.0]
+
+thresholds:
+  fdr_alpha: 0.05
+  min_abs_lfc: 0.585          # |log2FC| >= 0.585 (~1.5x fold change)
+  selection_rule: "fdr_lfc"   # "fdr_lfc" or "top_k"
+  primary_top_k: 50           # Prespecified primary endpoint K=50 (Sec 11.2)
+  sensitivity_top_k: 100      # Prespecified sensitivity endpoint K=100 (Sec 11.2)
+  bootstrap_ci_replicates: 50
+
+cohorts:
+  msigdb_library: "MSigDB_Hallmark_2020"
+  min_samples_per_group: 10
+  geo_accessions:
+    GSE44076:
+      platform_annot: "GSE44076_family.soft.gz"
+      assay: "log_expression"
+      case_keywords: ["tumor", "tumour", "adenocarcinoma", "cancer", "carcinoma"]
+      control_keywords: ["normal", "mucosa", "healthy", "adjacent", "mucosa"]
+      exclude_keywords: ["metastasis", "cell line", "organoid"]
+    GSE44861:
+      platform_annot: "GPL3921.annot.gz"
+      assay: "log_expression"
+      case_keywords: ["tumor", "tumour", "cancer", "adenocarcinoma", "carcinoma"]
+      control_keywords: ["normal", "adjacent", "non-tumor", "non-tumour", "mucosa"]
+      exclude_keywords: ["metastasis", "cell line"]
+    GSE20916:
+      platform_annot: "GPL570.annot.gz"
+      assay: "log_expression"
+      case_keywords: ["adenocarcinoma", "carcinoma", "tumor", "tumour", "cancer"]
+      control_keywords: ["normal", "mucosa", "healthy", "control"]
+      exclude_keywords: ["adenoma", "metastasis", "cell line"]
+    GSE32323:
+      platform_annot: "GPL570.annot.gz"
+      assay: "log_expression"
+      case_keywords: ["cancer", "tumor", "tumour", "adenocarcinoma", "carcinoma"]
+      control_keywords: ["normal", "non-cancerous", "adjacent", "mucosa"]
+      exclude_keywords: ["cell line", "5-aza"]

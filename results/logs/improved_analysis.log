@@ -1,0 +1,91 @@
+STEP 1/5: resampling with SNR + fixed BootstrapSeq (B=100)
+  -> GSE44076
+  -> GSE44861
+  -> GSE20916
+  -> GSE32323
+STEP 2/5: LOCO — all 4 cohorts, K=50 and K=20
+STEP 3/5: 3-cohort sensitivity (no GSE44076, quality p=0.000)
+
+STEP 4/5: Summary TopK_Overlap ranking
+
+--- K=50 (primary) ---
+                           mean   min   max
+Method                                     
+Meta_Effect               0.285  0.24  0.38
+SumRank_Bulk              0.280  0.18  0.40
+Single_DE                 0.250  0.22  0.32
+Ablation_No_Cg (S_g*D_g)  0.195  0.04  0.32
+StableOmics_WeightedSum   0.185  0.06  0.32
+StableOmics_Rg            0.185  0.06  0.30
+S_g_only                  0.175  0.00  0.32
+SNR_g_only                0.085  0.04  0.14
+StableOmics_Rg_SNR        0.085  0.04  0.14
+BootstrapSeq              0.045  0.00  0.10
+
+--- K=20 (sharp) ---
+                           mean   min   max
+Method                                     
+Single_DE                 0.212  0.15  0.30
+Meta_Effect               0.212  0.15  0.25
+SumRank_Bulk              0.188  0.10  0.30
+S_g_only                  0.125  0.00  0.25
+Ablation_No_Cg (S_g*D_g)  0.100  0.00  0.25
+StableOmics_Rg            0.075  0.00  0.15
+StableOmics_Rg_SNR        0.062  0.00  0.10
+SNR_g_only                0.062  0.00  0.10
+StableOmics_WeightedSum   0.062  0.00  0.15
+BootstrapSeq              0.050  0.00  0.15
+
+--- 3-cohort (no GSE44076, K=50) ---
+                           mean   min   max
+Method                                     
+Meta_Effect               0.280  0.24  0.34
+SumRank_Bulk              0.260  0.14  0.40
+Single_DE                 0.187  0.06  0.28
+StableOmics_WeightedSum   0.160  0.08  0.32
+Ablation_No_Cg (S_g*D_g)  0.153  0.06  0.32
+S_g_only                  0.147  0.04  0.32
+StableOmics_Rg            0.140  0.04  0.32
+SNR_g_only                0.080  0.02  0.12
+StableOmics_Rg_SNR        0.080  0.02  0.12
+BootstrapSeq              0.040  0.00  0.08
+
+STEP 5/5: Paired deltas vs Single_DE (TopK_Overlap)
+
+--- K=50 ---
+                  Method  delta   min   max  wins  losses
+             Meta_Effect  0.035 -0.04  0.16     2       1
+            SumRank_Bulk  0.030 -0.04  0.12     2       2
+Ablation_No_Cg (S_g*D_g) -0.055 -0.20  0.10     1       2
+          StableOmics_Rg -0.065 -0.18  0.08     1       3
+ StableOmics_WeightedSum -0.065 -0.18  0.10     1       3
+                S_g_only -0.075 -0.24  0.08     1       2
+              SNR_g_only -0.165 -0.20 -0.14     0       4
+      StableOmics_Rg_SNR -0.165 -0.20 -0.14     0       4
+            BootstrapSeq -0.205 -0.28 -0.12     0       4
+
+--- K=20 ---
+                  Method  delta  min   max  wins  losses
+             Meta_Effect  0.000 -0.1  0.05     2       1
+            SumRank_Bulk -0.025 -0.2  0.10     1       1
+                S_g_only -0.088 -0.3  0.05     1       2
+Ablation_No_Cg (S_g*D_g) -0.112 -0.3  0.05     1       3
+          StableOmics_Rg -0.137 -0.3 -0.05     0       4
+ StableOmics_WeightedSum -0.150 -0.3 -0.05     0       4
+              SNR_g_only -0.150 -0.3 -0.05     0       4
+      StableOmics_Rg_SNR -0.150 -0.3 -0.05     0       4
+            BootstrapSeq -0.162 -0.3 -0.05     0       4
+
+--- 3-cohort ---
+                  Method  delta   min   max  wins  losses
+             Meta_Effect  0.093 -0.04  0.20     2       1
+            SumRank_Bulk  0.073 -0.14  0.18     2       1
+ StableOmics_WeightedSum -0.027 -0.20  0.10     2       1
+Ablation_No_Cg (S_g*D_g) -0.033 -0.22  0.10     2       1
+                S_g_only -0.040 -0.24  0.10     2       1
+          StableOmics_Rg -0.047 -0.24  0.10     1       1
+              SNR_g_only -0.107 -0.26  0.04     1       2
+      StableOmics_Rg_SNR -0.107 -0.26  0.04     1       2
+            BootstrapSeq -0.147 -0.28 -0.02     0       3
+
+DONE — all outputs in results/tables/Improvement_*.csv

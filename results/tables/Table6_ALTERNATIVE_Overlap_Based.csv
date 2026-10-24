@@ -1,0 +1,10 @@
+Method,Top-K overlap (mean [range]),Jaccard (mean),Spearman rho (mean)
+Meta_Effect,0.285 [0.240-0.380],0.168,0.595
+SumRank_Bulk,0.280 [0.180-0.400],0.166,0.578
+Single_DE,0.250 [0.220-0.320],0.144,0.504
+Ablation_No_Dg (S_g*C_g),0.195 [0.060-0.320],0.113,0.524
+Ablation_No_Cg (S_g*D_g),0.195 [0.040-0.320],0.113,0.520
+StableOmics_WeightedSum,0.185 [0.060-0.320],0.107,0.550
+StableOmics_Rg,0.185 [0.060-0.300],0.106,0.527
+S_g_only,0.175 [0.000-0.320],0.102,0.516
+BootstrapSeq,0.175 [0.000-0.320],0.102,0.516

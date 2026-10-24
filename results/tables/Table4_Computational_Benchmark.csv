@@ -1,0 +1,13 @@
+Task,Genes,Samples,Median time (s) [Range],Peak RAM (GB)
+Load and QC,19468,4 GEO Cohorts,9.14 (8.53-9.32),0.594
+Single baseline fit,7542,246,0.02 (0.02-0.02),0.575
+One resampling replicate,7542,246,0.02 (0.02-0.02),0.581
+Full B-resample run,7542,246,1.91 (1.91-1.91),0.582
+Full B-resample run,7542,111,0.83 (0.83-0.83),0.563
+Full B-resample run,7542,60,17.23 (17.23-17.23),0.569
+Full B-resample run,7542,34,0.57 (0.57-0.57),0.557
+External validation,7542,246,3.60 (3.60-3.60),0.598
+External validation,7542,111,3.07 (3.07-3.07),0.574
+External validation,7542,60,11.41 (11.41-11.41),0.570
+External validation,7542,34,2.85 (2.85-2.85),0.559
+Enrichment/pathway summary,7542,n/a,0.07 (0.07-0.07),0.555

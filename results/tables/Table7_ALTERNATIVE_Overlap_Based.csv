@@ -1,0 +1,8 @@
+Comparison,Delta Top-K overlap,Cohort range,Wins,Losses
+R_g vs Single_DE,-0.065,[-0.180; +0.080],1,3
+R_g vs S_g_only,+0.010,[-0.020; +0.060],1,1
+R_g vs BootstrapSeq,+0.010,[-0.020; +0.060],1,1
+R_g vs SumRank_Bulk,-0.095,[-0.140; -0.040],0,4
+R_g vs Meta_Effect,-0.100,[-0.180; +0.020],1,3
+R_g vs Ablation_No_Cg (S_g*D_g),-0.010,[-0.020; +0.020],1,3
+R_g vs Ablation_No_Dg (S_g*C_g),-0.010,[-0.020; +0.000],0,2

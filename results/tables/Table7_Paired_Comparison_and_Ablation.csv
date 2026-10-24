@@ -1,0 +1,7 @@
+Comparison,Delta DR_K,Cohort Range [min; max],Independent cohorts (C),Interpretation
+R_g vs. Single-cohort DE,+0.000,[+0.000; +0.000],4,No benefit / equivalent
+R_g vs. Stability only (S_g),+0.000,[+0.000; +0.000],4,No benefit / equivalent
+R_g vs. BootstrapSeq,+0.000,[+0.000; +0.000],4,No benefit / equivalent
+R_g vs. SumRank (Bulk adaptation),+0.000,[+0.000; +0.000],4,No benefit / equivalent
+Remove C_g component (S_g * D_g),+0.005,[+0.000; +0.020],4,Consistent positive trend
+Remove D_g component (S_g * C_g),+0.010,[+0.000; +0.020],4,Consistent positive trend
